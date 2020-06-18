@@ -157,10 +157,6 @@ body {
     height: 300px;
 }
 
-.form-check label {
-    color: black !important;
-}
-
 .sectionIcon {
     width: 1em;
     vertical-align: bottom;

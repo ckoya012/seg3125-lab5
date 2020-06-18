@@ -33,19 +33,12 @@ $(function() {
 
 $(document).ready(function() {
 
-    // var selectedJohn = document.getElementById("john").checked;
-    // var selectedJane = document.getElementById("jane").checked;
-
-    // console.log(selectedJane);
-    // console.log(selectedJohn);
-
     var radios = document.forms[0].elements["stylist"];
 
     for (var i = 0, max = radios.length; i < max; i++) {
         radios[i].onclick = function() {
-            document.getElementById("bookingDetails").style.display = 'block';
-
             updateDates(this.value);
+            document.getElementById("bookingDetails").style.display = 'block';
         }
     }
 
@@ -68,6 +61,5 @@ $(document).ready(function() {
                 }
             }
         });
-
     }
 });

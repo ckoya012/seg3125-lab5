@@ -157,6 +157,34 @@ body {
     height: 300px;
 }
 
+.form-check label {
+    color: black !important;
+}
+
+.sectionIcon {
+    width: 1em;
+    vertical-align: bottom;
+    margin-right: 10px;
+}
+
+.nav-item .sectionIcon {
+    fill: white;
+    margin-right: 0px;
+    display: inline-block;
+}
+
+#scissors {
+    margin-right: 5px;
+}
+
+#teamIcon {
+    width: 1.4em;
+}
+
+#bookingDetails {
+    display: none;
+}
+
 
 /* Contact Us section styles*/
 

@@ -1,5 +1,15 @@
 /* Adapted from https://www.w3schools.com/howto/howto_js_active_element.asp */
 
+var hairstylists = [{
+        name: "john",
+        daysAvailable: [1, 2, 3]
+    },
+    {
+        name: "jane",
+        daysAvailable: [3, 4, 5]
+    }
+]
+
 // Get the container element
 var navbarItemsList = document.getElementById("navbarItemsList");
 
@@ -14,3 +24,50 @@ for (var i = 0; i < navItems.length; i++) {
         this.className += " active";
     });
 }
+
+$(function() {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+
+
+
+$(document).ready(function() {
+
+    // var selectedJohn = document.getElementById("john").checked;
+    // var selectedJane = document.getElementById("jane").checked;
+
+    // console.log(selectedJane);
+    // console.log(selectedJohn);
+
+    var radios = document.forms[0].elements["stylist"];
+
+    for (var i = 0, max = radios.length; i < max; i++) {
+        radios[i].onclick = function() {
+            document.getElementById("bookingDetails").style.display = 'block';
+
+            updateDates(this.value);
+        }
+    }
+
+
+    function updateDates(stylist) {
+        var stylistNum = 0;
+        if (stylist == "jane") {
+            stylistNum = 1;
+        }
+
+        $("#datepicker").datepicker("destroy");
+
+        $("#datepicker").datepicker({
+            beforeShowDay: function(d) {
+                day = d.getDay();
+                if ($.inArray(day, hairstylists[stylistNum].daysAvailable) < 0) {
+                    return [false];
+                } else {
+                    return [true];
+                }
+            }
+        });
+
+    }
+});

@@ -373,12 +373,17 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="formPhone" data-toggle="tooltip" title="Format should be 123-456-7890"><b>Phone</b></label>
+                                    <label for="formPhone" class="tooltipStyle" data-toggle="tooltip" title="Format should be 123-456-7890">
+                                        <b><u>Phone</u></b>
+                                        <i class="fa fa-phone"></i>
+                                    </label>
                                     <input class="form-control" id="formPhone" type="tel" placeholder="XXX-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" autofocus required>
                                 </div>
 
-
-                                <label for="stylist" data-toggle="tooltip" title="This will be the stylist who will be taking care of you!"><b>Hairstylist</b></label>
+                                <label for="stylist" data-toggle="tooltip" class="tooltipStyle" title="This will be the stylist who will be taking care of you!">
+                                    <b><u>Hairstylist</u></b> 
+                                    <i class="fa fa-scissors"></i>
+                                </label>
                                 <div class="form-group">
 
                                     <div class="form-check" id="selectStylist">
@@ -404,8 +409,8 @@
                                         <input class="form-control" id="formTime" type="time" autofocus required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="formCC" data-toggle="tooltip" title="We require your credit card information in order to reserve your spot.">
-                                        <b>Credit Card Information</b>
+                                        <label for="formCC" data-toggle="tooltip" class="tooltipStyle" title="We require your credit card information in order to reserve your spot.">
+                                        <b><u>Credit Card Information</u></b> 
                                         <i class="fa fa-credit-card"></i>
                                     </label>
                                         <input class="form-control" id="formCC" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" minlength="13" maxlength="19" placeholder="XXXX XXXX XXXX XXXX" autofocus required>
@@ -419,7 +424,8 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="formCVV" data-toggle="tooltip" title="Three-digits code on the back of your card"><b>CVV</b>
+                                        <label for="formCVV" data-toggle="tooltip" class="tooltipStyle" title="Three-digits code on the back of your card">
+                                            <b><u>CVV</u></b>
                                         <i class="fa fa-question-circle"></i>
                                     </label>
                                         <input type="text" class="form-control" minlength="3" maxlength="3" autofocus required>
@@ -540,10 +546,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
     <script src="index.js"></script>
     <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function() {
             'use strict';
             window.addEventListener('load', function() {

@@ -52,6 +52,7 @@ $(document).ready(function() {
         $("#datepicker").datepicker("destroy");
 
         $("#datepicker").datepicker({
+            minDate: 0,
             beforeShowDay: function(d) {
                 day = d.getDay();
                 if ($.inArray(day, hairstylists[stylistNum].daysAvailable) < 0) {

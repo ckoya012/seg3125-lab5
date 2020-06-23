@@ -164,9 +164,17 @@ body {
 }
 
 .nav-item .sectionIcon {
-    fill: white;
+    fill: rgba(255, 255, 255, .5);
     margin-right: 0px;
     display: inline-block;
+}
+
+.nav-item .nav-link:hover svg {
+    fill: white;
+}
+
+.navbar-dark .navbar-nav .nav-link.active svg {
+    fill: white;
 }
 
 #scissors {
